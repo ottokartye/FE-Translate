@@ -1,9 +1,9 @@
 # Synopsis
 
-This is an **in progress** translator written fully in Typescript that takes a text containing certain keywords and finds the corresponding translation for them. 
+This is an **in progress** translator written using Typescript that resolves keywords delimited by some special characters in a given text and finds the corresponding translation for them. 
 
 It also contains a **Mocha** test file for testing different functions the translator handles.
-Translations are provided via *JSON* format and you also have to provide the regular expressions for recognizing your keywords.
+Translations are red for now from a *JSON* variable and you also have to provide the regular expressions for recognizing your keywords.
 
 # Code example
 
