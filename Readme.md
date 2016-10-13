@@ -14,25 +14,28 @@ When initializing the Format class you need to provide 3 parameters: *RegularExp
 var expressions = new ExpressionContainer(
 	new RegExp("(%[a-zA-Z_,]{1,}%)+", 'g'),
 	new RegExp("(\{[a-zA-Z_]{1,}\})+", 'g')
-);```
+);
 
-`let translations: Array<Translation> = [
+let translations: Array<Translation> = [
 	{ 'IDS_Artist' : {singular: 'artist',plural: 'artists'} },
 	{ 'IDS_Album' : {singular: 'album', plural: 'albums'} },
 	{ 'IDS_Track' : {singular: 'track', plural: 'tracks'} },
 	{ 'IDS_Disclaimer' : {singular: 'Copyright %IDS_Year%'} },
 	{ 'IDS_Year' : {singular: '2016'} }
-];`
+];
 
-`let Format = new Format(expressions, 'en', translations);`
+let Format = new Format(expressions, 'en', translations);
+```
 
 ## Getting the translations
 
 Calling the actual *format* function you need to provide the *text* needed to be translated and the *data* variable in JSON format where the values for all the mentioned variables in the text have their value.
 
-`let data: any = {countTrack: 0, countAlbum: 5,	countArtist: 46};`
+```javascript
+let data: any = {countTrack: 0, countAlbum: 5,	countArtist: 46};
 
-`Format.format('This %IDS_Artist% has {countAlbum} %countAlbum,IDS_Album%. He is a good %IDS_Artist%. %IDS_Disclaimer%', data);`
+Format.format('This %IDS_Artist% has {countAlbum} %countAlbum,IDS_Album%. He is a good %IDS_Artist%. %IDS_Disclaimer%', data);
+```
 
 # Motivation
 
