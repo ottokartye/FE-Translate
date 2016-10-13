@@ -10,10 +10,10 @@ Translations are red for now from a *JSON* variable and you also have to provide
 ## Initializing
 When initializing the Format class you need to provide 3 parameters: *RegularExpressions container*, currently selected language, the translations in JSON format:
 
-`var expressions = new ExpressionContainer(
+```var expressions = new ExpressionContainer(
 	new RegExp("(%[a-zA-Z_,]{1,}%)+", 'g'),
 	new RegExp("(\{[a-zA-Z_]{1,}\})+", 'g')
-);`
+);```
 
 `let translations: Array<Translation> = [
 	{ 'IDS_Artist' : {singular: 'artist',plural: 'artists'} },
